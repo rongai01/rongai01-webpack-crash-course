@@ -2,6 +2,8 @@ import _ from 'lodash'
 import Lion from './utilities'
 
 import style from './style.css'
+import test from '../src/img/test.jpg'
+
 console.log(style.toString());
 
 
@@ -20,3 +22,6 @@ document.body.appendChild(component());
 
 document.body.classList.add('back-bg')
 
+const image = new Image()
+image.src = test
+document.body.appendChild(image);

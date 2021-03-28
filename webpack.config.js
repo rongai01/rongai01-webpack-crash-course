@@ -20,7 +20,15 @@ module.exports = {
                 'style-loader',
                 'css-loader'
                 ]
-            } 
+            },
+            {
+            test: /\.(jpe?g|png|gif|svg|ico)$/i,
+            loader:'url-loader', 
+            options:{
+                limit:2048,     // 2Kbiteを超えると
+                name:'./images/[name].[ext]' // この名前で別に下記変わり、独立したファイルで分離
+            }
+            }
         ]
     },
     devServer:{
